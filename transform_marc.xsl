@@ -27,6 +27,9 @@
     <xsl:template match="datafield[@tag='HOL']">
 
         <xsl:choose>
+            <xsl:when test="$full_count = 0"/>
+ 
+            
             <xsl:when test="$limited_count = 0">
                 <datafield tag="856" ind1="4" ind2="0">
                     <subfield code="3">
