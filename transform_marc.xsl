@@ -143,6 +143,8 @@
     <xsl:template match="datafield[@tag='040']"/>
     <xsl:template match="datafield[@tag='049']"/>
     <xsl:template match="datafield[@tag='533']"/>
+    <xsl:template match="datafield[@tag='776']"/>
+    <xsl:template match="datafield[@tag='856']"/>
 
 
 
