@@ -32,9 +32,9 @@
             
             <xsl:when test="$limited_count = 0">
                 <datafield tag="856" ind1="4" ind2="0">
-                    <subfield code="3">
+                    <!--<subfield code="3">
                         <xsl:text>Full view: </xsl:text>
-                    </subfield>
+                    </subfield>-->
                     <subfield code="u">
                         <xsl:text>https://catalog.hathitrust.org/Record/</xsl:text>
                         <xsl:value-of select="preceding-sibling::controlfield[@tag='001']"/>
@@ -43,12 +43,13 @@
             </xsl:when>
             <xsl:otherwise>
                 <datafield tag="856" ind1="4" ind2="0">
+                    <xsl:if test="$full_vols != ''">
                     <subfield code="3">
-                        <xsl:text>Full view: </xsl:text>
-                        <xsl:if test="$full_vols != ''">
-                            <xsl:value-of select="$full_vols"/>
-                        </xsl:if>
+                     <!--   <xsl:text>Full view: </xsl:text>-->
+
+                            <xsl:value-of select="$full_vols"/>   
                     </subfield>
+                    </xsl:if>    
                     <subfield code="u">
                         <xsl:text>https://catalog.hathitrust.org/Record/</xsl:text>
                         <xsl:value-of select="preceding-sibling::controlfield[@tag='001']"/>
@@ -84,12 +85,12 @@
                     </xsl:variable>
 
                     <datafield tag="856" ind1="4" ind2="0">
-
+                        <xsl:if test="string-length(subfield[@code='z']) &gt; 0">
                         <subfield code="3">
-                            <xsl:text>Full view: </xsl:text>
+                           <!-- <xsl:text>Full view: </xsl:text>-->
                             <xsl:value-of select="subfield[@code='z']"/>
                         </subfield>
-
+                        </xsl:if>
                         <subfield code="u">
                             <xsl:value-of
                                 select="$ia//records/metadata[child::identifier-ark=$ark]/identifier-access"/>
