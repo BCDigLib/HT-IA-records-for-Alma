@@ -79,7 +79,7 @@
 
             <xsl:for-each select="following-sibling::datafield[@tag='974']">
                 <xsl:if
-                    test="(subfield[@code='r']='ic' or subfield[@code='r']='und' or subfield[@code='r']='op' or subfield[@code='r']='nobody' or subfield[@code='r']='pd-pvt' or subfield[@code='r']='supp') and (subfield[@code='b']='MCHB')">
+                    test="(subfield[@code='r']='icus' or subfield[@code='r']='ic' or subfield[@code='r']='und' or subfield[@code='r']='op' or subfield[@code='r']='nobody' or subfield[@code='r']='pd-pvt' or subfield[@code='r']='supp') and (subfield[@code='b']='MCHB')">
                     <xsl:variable name="ark">
                         <xsl:value-of select="substring(subfield[@code='u'],4)"/>
                     </xsl:variable>
@@ -102,6 +102,8 @@
 
         </xsl:if>
     </xsl:template>
+    
+    <xsl:template match="datafield[@tag='776']"/>
 
     <xsl:template match="datafield[@tag='974']"/>
 
@@ -144,7 +146,7 @@
     <xsl:template match="datafield[@tag='040']"/>
     <xsl:template match="datafield[@tag='049']"/>
     <xsl:template match="datafield[@tag='533']"/>
-    <xsl:template match="datafield[@tag='776']"/>
+
     <xsl:template match="datafield[@tag='856']"/>
 
 
