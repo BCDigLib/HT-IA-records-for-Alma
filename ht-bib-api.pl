@@ -27,7 +27,7 @@ $fh->close();
 sub main
 {
 	open (HATHI_FILE, $hathi_record_numbers);
-	$fh->print("<collection>\n");
+	$fh->print("<collection xmlns=\"http:\/\/www.loc.gov\/MARC21\/slim\">\n");
 	while (<HATHI_FILE>) 
 	{
 		chomp;

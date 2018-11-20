@@ -101,6 +101,11 @@
             </xsl:for-each>
 
         </xsl:if>
+        <datafield tag="940" ind1="1" ind2=" ">
+            <subfield code="a">BCHTandIA</subfield>
+        </datafield>
+        
+        
     </xsl:template>
     
     <xsl:template match="datafield[@tag='776']"/>
