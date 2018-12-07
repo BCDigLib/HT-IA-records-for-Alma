@@ -150,8 +150,11 @@
     <xsl:template match="controlfield[@tag='004']"/>
     <xsl:template match="datafield[@tag='040']"/>
     <xsl:template match="datafield[@tag='049']"/>
+    <xsl:template match="datafield[@tag='506']"/>
     <xsl:template match="datafield[@tag='533']"/>
-
+    <xsl:template match="datafield[@tag='541']"/>
+    <xsl:template match="datafield[@tag='596']"/>
+    <xsl:template match="datafield[@tag='599']"/>
     <xsl:template match="datafield[@tag='856']"/>
 
 
